@@ -10,16 +10,18 @@ options("tercen.stepId"     = "b1c658a9-59c0-4416-b8d9-6f735d32333f")
 getOption("tercen.workflowId")
 getOption("tercen.stepId")
 
-do.scale = function(df, ...) {
+do.transform = function(df) {
   biexp  <- biexponentialTransform("bi_exponential")
   scale.m = try(transform(new("flowFrame", exprs = as.matrix(df)), `.y` =
                             biexp(`.y`))@exprs[, 3],
                 silent = TRUE)
   
-  if(inherits(scale.m, 'try-error')) {
-    return (data.frame(.ri = integer(),
-                       .ci = integer(),
-                       scale=double()))
+  if (inherits(scale.m, 'try-error')) {
+    return (data.frame(
+      .ri = integer(),
+      .ci = integer(),
+      scale = double()
+    ))
   }
   
   result = as_tibble(scale.m) %>%
@@ -37,10 +39,6 @@ do.scale = function(df, ...) {
   group_by(.ci, .ri) %>%
   summarise(.y = mean(.y)) %>%
   group_by(.ri) %>%
-  do(do.scale(
-    .,
-    scale = as.logical(ctx$op.value('scale')),
-    center = as.logical(ctx$op.value('center'))
-  )) %>%
+  do(do.transform(.)) %>%
   ctx$addNamespace() %>%
   ctx$save()
