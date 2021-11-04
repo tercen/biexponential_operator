@@ -2,11 +2,9 @@ library(tercen)
 library(dplyr, warn.conflicts = FALSE)
 library(flowCore)
 
-
 do.transform = function(df, ...) {
-  biexp  <- biexponentialTransform("bi_exponential")
   scale.m = try(transform(new("flowFrame", exprs = as.matrix(df)), `.y` =
-                            biexp(`.y`))@exprs[, 3],
+                            biexponentialTransform("bi_exponential")(`.y`))@exprs[, 3],
                 silent = TRUE)
   
   if (inherits(scale.m, 'try-error')) {
@@ -16,6 +14,8 @@ do.transform = function(df, ...) {
       scale = double()
     ))
   }
+  
+  browser()
   
   result = as_tibble(scale.m) %>%
     rename_all(
@@ -27,14 +27,13 @@ do.transform = function(df, ...) {
   return (result)
 }
 
-
 ctx = tercenCtx()
 
-ctx = ctx %>%
+ctx %>%
   select(.ci, .ri, .y) %>%
   group_by(.ci, .ri) %>%
   summarise(.y = mean(.y)) %>%
   group_by(.ri) %>%
-  do(do.transform(.)) %>%
+  do(do.transform(.,)) %>%
   ctx$addNamespace() %>%
   ctx$save()

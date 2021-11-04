@@ -10,10 +10,9 @@ options("tercen.stepId"     = "b1c658a9-59c0-4416-b8d9-6f735d32333f")
 getOption("tercen.workflowId")
 getOption("tercen.stepId")
 
-do.transform = function(df) {
-  biexp  <- biexponentialTransform("bi_exponential")
+do.transform = function(df, ...) {
   scale.m = try(transform(new("flowFrame", exprs = as.matrix(df)), `.y` =
-                            biexp(`.y`))@exprs[, 3],
+                            biexponentialTransform("bi_exponential")(`.y`))@exprs[, 3],
                 silent = TRUE)
   
   if (inherits(scale.m, 'try-error')) {
@@ -23,6 +22,8 @@ do.transform = function(df) {
       scale = double()
     ))
   }
+  
+  browser()
   
   result = as_tibble(scale.m) %>%
     rename_all(
@@ -36,11 +37,11 @@ do.transform = function(df) {
 
 ctx = tercenCtx()
 
-ctx = ctx %>%
+ctx %>%
   select(.ci, .ri, .y) %>%
   group_by(.ci, .ri) %>%
   summarise(.y = mean(.y)) %>%
   group_by(.ri) %>%
-  do(do.transform(.)) %>%
+  do(do.transform(.,)) %>%
   ctx$addNamespace() %>%
   ctx$save()
