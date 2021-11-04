@@ -27,7 +27,10 @@ do.transform = function(df, ...) {
   return (result)
 }
 
-(ctx = tercenCtx()) %>%
+
+ctx = tercenCtx()
+
+ctx = ctx %>%
   select(.ci, .ri, .y) %>%
   group_by(.ci, .ri) %>%
   summarise(.y = mean(.y)) %>%
