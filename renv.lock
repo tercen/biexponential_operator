@@ -29,15 +29,15 @@
     ]
   },
   "Bioconductor": {
-    "Version": null
+    "Version": "3.12"
   },
   "Packages": {
     "BH": {
       "Package": "BH",
-      "Version": "1.75.0-0",
+      "Version": "1.78.0-0",
       "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "e4c04affc2cac20c8fec18385cd14691"
+      "Repository": "CRAN",
+      "Hash": "4e348572ffcaa2fb1e610e7a941f6f3a"
     },
     "Biobase": {
       "Package": "Biobase",
@@ -50,6 +50,13 @@
       "Version": "0.36.1",
       "Source": "Bioconductor",
       "Hash": "f628c51eadc74ffd838b801cd22d589a"
+    },
+    "BiocManager": {
+      "Package": "BiocManager",
+      "Version": "1.30.18",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b1a93bed5debda5775636086fdca017b"
     },
     "R6": {
       "Package": "R6",
@@ -66,24 +73,24 @@
     },
     "Rcpp": {
       "Package": "Rcpp",
-      "Version": "1.0.6",
+      "Version": "1.0.9",
       "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "dbb5e436998a7eba5a9d682060533338"
+      "Repository": "CRAN",
+      "Hash": "e9c08b94391e9f3f97355841229124f2"
     },
     "RcppArmadillo": {
       "Package": "RcppArmadillo",
-      "Version": "0.10.4.0.0",
+      "Version": "0.11.2.3.1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "a8df2d4278c6501b2c209f4acc6a3036"
+      "Hash": "8370a82b0c508599f2fa5a40a36b8102"
     },
     "RcppParallel": {
       "Package": "RcppParallel",
-      "Version": "5.1.4",
+      "Version": "5.1.5",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "0325b5be38a02d192828027983c7b470"
+      "Hash": "f3e94e34ff656a7c8336ce01207bc2b8"
     },
     "Rhdf5lib": {
       "Package": "Rhdf5lib",
@@ -131,6 +138,13 @@
       "Source": "Bioconductor",
       "Hash": "a845d719d5277f063a6dcea2f6d0d7d9"
     },
+    "data.table": {
+      "Package": "data.table",
+      "Version": "1.14.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "36b67b5adf57b292923f5659f5f0c853"
+    },
     "digest": {
       "Package": "digest",
       "Version": "0.6.27",
@@ -144,6 +158,13 @@
       "Source": "Repository",
       "Repository": "RSPM",
       "Hash": "01c82e3b053eb7660a8ace8d932265b8"
+    },
+    "dtplyr": {
+      "Package": "dtplyr",
+      "Version": "1.2.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c5f8828a0b459a703db190b001ad4818"
     },
     "ellipsis": {
       "Package": "ellipsis",
@@ -195,10 +216,10 @@
     },
     "matrixStats": {
       "Package": "matrixStats",
-      "Version": "0.58.0",
+      "Version": "0.62.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "c318d148056e5bb8d7de79b0876f9ae6"
+      "Hash": "36ad89a805c436c5316c22490079da67"
     },
     "mtercen": {
       "Package": "mtercen",
