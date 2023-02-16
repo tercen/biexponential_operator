@@ -1,4 +1,4 @@
-# Biexponential transformation operator
+# Biexponential
 
 ##### Description
 
@@ -14,14 +14,9 @@ Input projection|.
 `y-axis`| measurement value
 
 
-Input parameters|.
----|---
-None.
-
-
 Output relations|.
 ---|---
-`transform`| numeric, per cell
+`value`| numeric, per cell
 
 ##### Details
 

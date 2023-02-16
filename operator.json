@@ -1,7 +1,7 @@
 {
-  "name": "Biexponential_transform",
+  "name": "Biexponential",
   "description": "Perform a biexponential transformation of data points in a cell.",
-  "tags": ["transformation", "biexponential"],
+  "tags": ["data transformation", "data preprocessing", "flow cytometry"],
   "authors": ["tercen"],
   "urls": ["https://github.com/tercen/biexponential_transform"],
   "properties": []
