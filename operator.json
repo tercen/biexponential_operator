@@ -1,6 +1,6 @@
 {
   "name": "Biexponential",
-  "description": "Perform a biexponential transformation of data points in a cell.",
+  "description": "Performs a biexponential transformation of your data.",
   "tags": [
     "flow cytometry",
     "preprocessing",
