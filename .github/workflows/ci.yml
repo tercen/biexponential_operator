@@ -29,6 +29,6 @@ jobs:
         docker run --rm --net=host \
           -e TERCEN_USERNAME=test \
           -e TERCEN_PASSWORD=test \
-          -e TERCEN_URI=http://127.0.0.1:5400 \
+          -e TERCEN_URI=http://172.42.0.42:5400 \
           -e GITHUB_TOKEN=${GITHUB_TOKEN} \
           tercen/tercenctl:release operator install --rm --tag ${GITHUB_SHA} --repo ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}
