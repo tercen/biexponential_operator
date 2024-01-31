@@ -12,5 +12,56 @@
   "urls": [
     "https://github.com/tercen/biexponential_transform"
   ],
-  "properties": []
+  "properties": [
+    {
+      "kind": "DoubleProperty",
+      "name": "a",
+      "defaultValue": 0.5,
+      "description": "See the function description in the operator documentation. Defaults to 0.5."
+    },
+    {
+      "kind": "DoubleProperty",
+      "name": "b",
+      "defaultValue": 1.0,
+      "description": "See the function description in the operator documentation. Defaults to 1.0."
+    },
+    {
+      "kind": "DoubleProperty",
+      "name": "c",
+      "defaultValue": 0.5,
+      "description": "See the function description in the operator documentation. Defaults to 0.5."
+    },
+    {
+      "kind": "DoubleProperty",
+      "name": "d",
+      "defaultValue": 1.0,
+      "description": "See the function description in the operator documentation. Defaults to 1.0."
+    },
+    {
+      "kind": "DoubleProperty",
+      "name": "f",
+      "defaultValue": 0,
+      "description": "A constant bias for the intercept. Defaults to 0."
+    },
+    {
+      "kind": "DoubleProperty",
+      "name": "w",
+      "defaultValue": 0,
+      "description": "A constant bias for the 0 point of the data. Defaults to 0."
+    }
+  ]
 }
+
+
+	
+
+
+b	
+See the function description in the operator documentation. Defaults to 1.0
+
+c	
+See the function description above. Defaults to 0.5 (the same as a)
+
+d	
+See the function description above. Defaults to 1 (the same as b)
+
