@@ -29,6 +29,7 @@ jobs:
     - name: Install operator
       continue-on-error: true
       run: |
+        sleep 60
         docker run --rm --net=host \
           -e TERCEN_USERNAME=test \
           -e TERCEN_PASSWORD=test \
