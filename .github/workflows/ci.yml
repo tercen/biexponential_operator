@@ -26,7 +26,7 @@ jobs:
       run: docker pull tercen/tercenctl:release
     - name: Install operator
       run: |
-        docker run --rm \
+        docker run --rm --net=host \
           -e TERCEN_USERNAME=test \
           -e TERCEN_PASSWORD=test \
           -e TERCEN_URI=http://127.0.0.1:5400 \
