@@ -21,13 +21,14 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    - uses: tercen/actions/start-tercen@main
     - name: Pull tercenctl
       run: docker pull tercen/tercenctl:release
     - name: Install operator
       run: |
         docker run --rm \
-          -e TERCEN_USERNAME=${{ secrets.TERCEN_TEST_OPERATOR_USERNAME }} \
-          -e TERCEN_PASSWORD=${{ secrets.TERCEN_TEST_OPERATOR_PASSWORD }} \
-          -e TERCEN_URI=${{ secrets.TERCEN_TEST_OPERATOR_URI }} \
+          -e TERCEN_USERNAME=test \
+          -e TERCEN_PASSWORD=test \
+          -e TERCEN_URI=http://127.0.0.1:5400 \
           -e GITHUB_TOKEN=${GITHUB_TOKEN} \
           tercen/tercenctl:release operator install --rm --tag ${GITHUB_SHA} --repo ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}
