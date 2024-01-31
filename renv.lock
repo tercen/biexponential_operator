@@ -3,28 +3,32 @@
     "Version": "4.0.4",
     "Repositories": [
       {
+        "Name": "BioCsoft",
+        "URL": "https://bioconductor.org/packages/3.12/bioc"
+      },
+      {
+        "Name": "BioCann",
+        "URL": "https://bioconductor.org/packages/3.12/data/annotation"
+      },
+      {
+        "Name": "BioCexp",
+        "URL": "https://bioconductor.org/packages/3.12/data/experiment"
+      },
+      {
+        "Name": "BioCworkflows",
+        "URL": "https://bioconductor.org/packages/3.12/workflows"
+      },
+      {
+        "Name": "BioCbooks",
+        "URL": "https://bioconductor.org/packages/3.12/books"
+      },
+      {
         "Name": "TERCEN",
         "URL": "https://cran.tercen.com/api/v1/rlib/tercen"
       },
       {
         "Name": "CRAN",
         "URL": "https://cran.tercen.com/api/v1/rlib/CRAN"
-      },
-      {
-        "Name": "BioCsoft",
-        "URL": "https://cran.tercen.com/api/v1/rlib/BioCsoft-3.12"
-      },
-      {
-        "Name": "BioCann",
-        "URL": "https://cran.tercen.com/api/v1/rlib/BioCann-3.12"
-      },
-      {
-        "Name": "BioCexp",
-        "URL": "https://cran.tercen.com/api/v1/rlib/BioCexp-3.12"
-      },
-      {
-        "Name": "BioCworkflows",
-        "URL": "https://cran.tercen.com/api/v1/rlib/BioCworkflows-3.12"
       }
     ]
   },
@@ -72,6 +76,16 @@
         "utils"
       ],
       "Hash": "f628c51eadc74ffd838b801cd22d589a"
+    },
+    "BiocManager": {
+      "Package": "BiocManager",
+      "Version": "1.30.22",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "utils"
+      ],
+      "Hash": "d57e43105a1aa9cb54fdb4629725acb1"
     },
     "R6": {
       "Package": "R6",
