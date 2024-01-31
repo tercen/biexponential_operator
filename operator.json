@@ -51,17 +51,3 @@
     }
   ]
 }
-
-
-	
-
-
-b	
-See the function description in the operator documentation. Defaults to 1.0
-
-c	
-See the function description above. Defaults to 0.5 (the same as a)
-
-d	
-See the function description above. Defaults to 1 (the same as b)
-
