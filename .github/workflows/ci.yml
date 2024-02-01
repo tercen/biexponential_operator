@@ -24,12 +24,9 @@ jobs:
     - uses: tercen/actions/start-tercen@main
     - name: Pull tercenctl
       run: docker pull tercen/tercenctl:release
-    - name: Check open port
-      run: bash wait_conn.sh 127.0.0.1 5400
     - name: Install operator
 #      continue-on-error: true
       run: |
-        sleep 30
         docker run --rm --net=host \
           -e TERCEN_USERNAME=test \
           -e TERCEN_PASSWORD=test \
