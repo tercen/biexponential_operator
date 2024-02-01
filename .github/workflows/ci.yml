@@ -23,7 +23,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: tercen/actions/start-tercen@main
       with:
-        branch: prod
+        branch: latest
     - name: Pull tercenctl
       run: docker pull tercen/tercenctl:release
     - name: Install operator
