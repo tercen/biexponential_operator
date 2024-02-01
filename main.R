@@ -8,7 +8,7 @@ suppressPackageStartupMessages({
 
 ctx = tercenCtx()
 
-df <- ctx$select(list(".ci", ".ri", ".y")) 
+df <- ctx %>% select(.ci, .ri, .y) 
 ff <- new("flowFrame", exprs = data.matrix(df))
 
 par_a <- ctx$op.value("a", as.numeric, 0.5)
