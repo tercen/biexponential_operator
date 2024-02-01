@@ -22,6 +22,8 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     - uses: tercen/actions/start-tercen@main
+      with:
+        branch: prod
     - name: Pull tercenctl
       run: docker pull tercen/tercenctl:release
     - name: Install operator
