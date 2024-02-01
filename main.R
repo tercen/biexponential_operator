@@ -26,4 +26,3 @@ scale.m = try(
   mutate(.ci = as.integer(.ci), .ri = as.integer(.ri)) %>%
   ctx$addNamespace() %>%
   ctx$save()
-

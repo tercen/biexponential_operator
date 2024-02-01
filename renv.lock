@@ -248,17 +248,6 @@
       ],
       "Hash": "a845d719d5277f063a6dcea2f6d0d7d9"
     },
-    "data.table": {
-      "Package": "data.table",
-      "Version": "1.14.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "methods"
-      ],
-      "Hash": "d1b8b1a821ee564a3515fa6c6d5c52dc"
-    },
     "dplyr": {
       "Package": "dplyr",
       "Version": "1.0.5",
@@ -280,26 +269,6 @@
         "vctrs"
       ],
       "Hash": "d0d76c11ec807eb3f000eba4e3eb0f68"
-    },
-    "dtplyr": {
-      "Package": "dtplyr",
-      "Version": "1.1.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "crayon",
-        "data.table",
-        "dplyr",
-        "ellipsis",
-        "glue",
-        "lifecycle",
-        "rlang",
-        "tibble",
-        "tidyselect",
-        "vctrs"
-      ],
-      "Hash": "1e14e4c5b2814de5225312394bc316da"
     },
     "ellipsis": {
       "Package": "ellipsis",
@@ -557,7 +526,7 @@
     },
     "tercenApi": {
       "Package": "tercenApi",
-      "Version": "0.13.0",
+      "Version": "0.12.8",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
