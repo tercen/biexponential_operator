@@ -1,8 +1,6 @@
 suppressPackageStartupMessages({
   library(tercen)
   library(dplyr, warn.conflicts = FALSE)
-  library(data.table)
-  library(dtplyr)
   library(flowCore)
 })
 
