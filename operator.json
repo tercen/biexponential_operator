@@ -1,6 +1,6 @@
 {
   "name": "Biexponential",
-  "description": "Performs a biexponential transformation of your data.",
+  "description": "Performs a bi-exponential transformation of your data.",
   "tags": [
     "flow cytometry",
     "preprocessing",
@@ -10,38 +10,38 @@
     "tercen"
   ],
   "urls": [
-    "https://github.com/tercen/biexponential_transform"
+    "https://github.com/tercen/biexponential_operator"
   ],
   "properties": [
     {
       "kind": "DoubleProperty",
       "name": "a",
       "defaultValue": 0.5,
-      "description": "See the function description in the operator documentation. Defaults to 0.5."
+      "description": "Parameter a"
     },
     {
       "kind": "DoubleProperty",
       "name": "b",
       "defaultValue": 1.0,
-      "description": "See the function description in the operator documentation. Defaults to 1.0."
+      "description": "Parameter b"
     },
     {
       "kind": "DoubleProperty",
       "name": "c",
       "defaultValue": 0.5,
-      "description": "See the function description in the operator documentation. Defaults to 0.5."
+      "description": "Parameter c"
     },
     {
       "kind": "DoubleProperty",
       "name": "d",
       "defaultValue": 1.0,
-      "description": "See the function description in the operator documentation. Defaults to 1.0."
+      "description": "Parameter d"
     },
     {
       "kind": "DoubleProperty",
       "name": "f",
       "defaultValue": 0,
-      "description": "A constant bias for the intercept. Defaults to 0."
+      "description": "Offset for the intercept. Defaults to 0."
     },
     {
       "kind": "DoubleProperty",
@@ -49,5 +49,54 @@
       "defaultValue": 0,
       "description": "A constant bias for the 0 point of the data. Defaults to 0."
     }
-  ]
+  ],
+  "operatorSpec": {
+    "kind": "OperatorSpec",
+    "ontologyUri": "https://tercen.com/_ontology/tercen",
+    "ontologyVersion": "0.0.1",
+    "inputSpecs": [
+      {
+        "kind": "CrosstabSpec",
+        "metaFactors": [
+          {
+            "kind": "MetaFactor",
+            "name": "Variable",
+            "type": "",
+            "description": "Variable identifiers (e.g. channels, markers, genes)",
+            "ontologyMapping": "variable",
+            "crosstabMapping": "row",
+            "cardinality": "1..n",
+            "factors": []
+          },
+          {
+            "kind": "MetaFactor",
+            "name": "Observation",
+            "type": "",
+            "description": "Observation identifiers (e.g. cells, samples, individuals)",
+            "ontologyMapping": "observation",
+            "crosstabMapping": "column",
+            "cardinality": "1..n",
+            "factors": []
+          }
+        ],
+        "axis": [
+          {
+            "kind": "AxisSpec",
+            "metaFactors": [
+              {
+                "kind": "MetaFactor",
+                "name": "Measurement",
+                "type": "numeric",
+                "description": "Measurement value",
+                "ontologyMapping": "measurement",
+                "crosstabMapping": "y",
+                "cardinality": "1",
+                "factors": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
