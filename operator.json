@@ -17,25 +17,25 @@
       "kind": "DoubleProperty",
       "name": "a",
       "defaultValue": 0.5,
-      "description": "Parameter a"
+      "description": "See the function description in the operator documentation. Defaults to 0.5."
     },
     {
       "kind": "DoubleProperty",
       "name": "b",
       "defaultValue": 1.0,
-      "description": "Parameter b"
+      "description": "See the function description in the operator documentation. Defaults to 1.0."
     },
     {
       "kind": "DoubleProperty",
       "name": "c",
       "defaultValue": 0.5,
-      "description": "Parameter c"
+      "description": "See the function description in the operator documentation. Defaults to 0.5."
     },
     {
       "kind": "DoubleProperty",
       "name": "d",
       "defaultValue": 1.0,
-      "description": "Parameter d"
+      "description": "See the function description in the operator documentation. Defaults to 1.0."
     },
     {
       "kind": "DoubleProperty",
@@ -57,28 +57,7 @@
     "inputSpecs": [
       {
         "kind": "CrosstabSpec",
-        "metaFactors": [
-          {
-            "kind": "MetaFactor",
-            "name": "Variable",
-            "type": "",
-            "description": "Variable identifiers (e.g. channels, markers, genes)",
-            "ontologyMapping": "variable",
-            "crosstabMapping": "row",
-            "cardinality": "1..n",
-            "factors": []
-          },
-          {
-            "kind": "MetaFactor",
-            "name": "Observation",
-            "type": "",
-            "description": "Observation identifiers (e.g. cells, samples, individuals)",
-            "ontologyMapping": "observation",
-            "crosstabMapping": "column",
-            "cardinality": "1..n",
-            "factors": []
-          }
-        ],
+        "metaFactors": [],
         "axis": [
           {
             "kind": "AxisSpec",
@@ -87,8 +66,8 @@
                 "kind": "MetaFactor",
                 "name": "Measurement",
                 "type": "numeric",
-                "description": "Measurement value",
-                "ontologyMapping": "measurement",
+                "description": "Input data, per cell",
+                "ontologyMapping": "y-axis",
                 "crosstabMapping": "y",
                 "cardinality": "1",
                 "factors": []
