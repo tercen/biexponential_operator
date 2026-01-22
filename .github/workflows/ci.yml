@@ -25,7 +25,7 @@ jobs:
       with:
         branch: 0.12.9
     - name: Pull tercenctl
-      run: docker pull tercen/tercenctl:0.6.0
+      run: docker pull tercen/tercenctl:0.7.0
     - name: Install operator
 #      continue-on-error: true
       run: |
@@ -34,7 +34,7 @@ jobs:
           -e TERCEN_PASSWORD=test \
           -e TERCEN_URI=http://127.0.0.1:5400 \
           -e GITHUB_TOKEN=${GITHUB_TOKEN} \
-          tercen/tercenctl:0.6.0 operator install --rm --tag ${GITHUB_SHA} --repo ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}
+          tercen/tercenctl:0.7.0 operator install --rm --tag ${GITHUB_SHA} --repo ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}
 #    - name: Check tercen logs
 #      run: |
 #        TERCEN=$(docker ps | grep tercen/tercen: | cut -d ' ' -f 1)
